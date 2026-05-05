@@ -1,4 +1,8 @@
 alterdune
+game
 *.o
 *.out
 .DS_Store
+*.md
+!README.md
+*.pdf
