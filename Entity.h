@@ -4,7 +4,7 @@
 #include <string>
 
 class Entity {
-protected:
+private:
     std::string name;
     int hp;
     int hpMax;

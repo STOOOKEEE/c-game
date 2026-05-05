@@ -9,7 +9,7 @@
 enum class MonsterCategory { NORMAL, MINIBOSS, BOSS };
 
 class Monster : public Entity {
-protected:
+private:
     MonsterCategory category;
     int mercy;
     int mercyGoal;

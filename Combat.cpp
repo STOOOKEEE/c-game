@@ -91,8 +91,8 @@ void Combat::playerAct(Monster* enemy) {
         auto it = actCatalog.find(acts[i]);
         if (it != actCatalog.end()) {
             std::string impact;
-            if (it->second.mercyImpact > 0) impact = " [+Mercy]";
-            else if (it->second.mercyImpact < 0) impact = " [-Mercy]";
+            if (it->second.getMercyImpact() > 0) impact = " [+Mercy]";
+            else if (it->second.getMercyImpact() < 0) impact = " [-Mercy]";
             else impact = " [=]";
             std::cout << "  " << i + 1 << ". " << acts[i] << impact << std::endl;
         }
@@ -114,8 +114,8 @@ void Combat::playerAct(Monster* enemy) {
         return;
     }
 
-    std::cout << it->second.text << std::endl;
-    enemy->modifyMercy(it->second.mercyImpact);
+    std::cout << it->second.getText() << std::endl;
+    enemy->modifyMercy(it->second.getMercyImpact());
     std::cout << "  [Mercy: " << enemy->getMercy() << "/" << enemy->getMercyGoal() << "]" << std::endl;
 }
 

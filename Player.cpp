@@ -18,8 +18,8 @@ void Player::addVictory() { this->victories++; }
 void Player::addItem(const Item& item) { this->inventory.push_back(item); }
 
 void Player::displayStats() const {
-    std::cout << "=== " << this->name << " ===" << std::endl;
-    std::cout << "HP: " << this->hp << "/" << this->hpMax << std::endl;
+    std::cout << "=== " << this->getName() << " ===" << std::endl;
+    std::cout << "HP: " << this->getHp() << "/" << this->getHpMax() << std::endl;
     std::cout << "Monsters killed: " << this->kills << std::endl;
     std::cout << "Monsters spared: " << this->spares << std::endl;
     std::cout << "Victories: " << this->victories << "/10" << std::endl;

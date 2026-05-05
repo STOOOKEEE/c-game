@@ -21,11 +21,11 @@ void UI::showBestiary(const std::vector<BestiaryEntry>& bestiary) {
     } else {
         for (size_t i = 0; i < bestiary.size(); i++) {
             auto& e = bestiary[i];
-            std::cout << i + 1 << ". " << e.name << " [" << e.category << "]"
-                      << " | HP: " << e.hpMax
-                      << " ATK: " << e.atk
-                      << " DEF: " << e.def
-                      << " | " << (e.killed ? "KILLED" : "SPARED") << std::endl;
+            std::cout << i + 1 << ". " << e.getName() << " [" << e.getCategory() << "]"
+                      << " | HP: " << e.getHpMax()
+                      << " ATK: " << e.getAtk()
+                      << " DEF: " << e.getDef()
+                      << " | " << (e.wasKilled() ? "KILLED" : "SPARED") << std::endl;
         }
     }
     std::cout << std::endl;

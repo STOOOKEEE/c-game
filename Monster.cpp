@@ -39,10 +39,10 @@ void Monster::setKilled(bool k) { this->killed = k; }
 void Monster::setSpared(bool s) { this->spared = s; }
 
 void Monster::displayStats() const {
-    std::cout << "--- " << this->name << " [" << this->getCategoryStr() << "] ---" << std::endl;
-    std::cout << "HP: " << this->hp << "/" << this->hpMax << std::endl;
-    std::cout << "ATK: " << this->atk << " | DEF: " << this->def << std::endl;
-    std::cout << "Mercy: " << this->mercy << "/" << this->mercyGoal << std::endl;
+    std::cout << "--- " << this->getName() << " [" << this->getCategoryStr() << "] ---" << std::endl;
+    std::cout << "HP: " << this->getHp() << "/" << this->getHpMax() << std::endl;
+    std::cout << "ATK: " << this->getAtk() << " | DEF: " << this->getDef() << std::endl;
+    std::cout << "Mercy: " << this->getMercy() << "/" << this->getMercyGoal() << std::endl;
 }
 
 // NormalMonster
