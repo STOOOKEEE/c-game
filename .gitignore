@@ -1,0 +1,4 @@
+alterdune
+*.o
+*.out
+.DS_Store
